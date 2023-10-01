@@ -50,7 +50,7 @@ class EmployeesListItem extends Component {
         super(props)  
     }
 
-    render() {
+    render() { 
         const {name, salary, onDelete, onToggleProp, increase, rise, onChangeSalary} = this.props;
 
         let classNames = "list-group-item d-flex justify-content-between";
@@ -63,7 +63,9 @@ class EmployeesListItem extends Component {
         
         return (
             <li className={classNames}>
-                <span className="list-group-item-label" onClick={onToggleProp} data-toggle="rise">{name}</span>
+                <span className="list-group-item-label" 
+                onClick={onToggleProp} 
+                data-toggle="rise">{name}</span>
                 <input type="text" className="list-group-item-input" defaultValue={salary + '$'} onChange={onChangeSalary}/>
                 <div className='d-flex justify-content-center align-items-center'>
                     <button type="button"
